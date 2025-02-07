@@ -1,0 +1,21 @@
+Project Dependencies:
+    - Node.js
+    - Node Express
+    - 
+
+Issues you may encounter while installing:
+    - npm not found
+        - Fixes:
+            - Restart VSCode
+            - Verify installation of Node.js using node -v or npm -v in the command line. 
+            Do this inside and outside of the project to verify if it is an issue with the program installation.
+    - Unable to run script:
+        - This bug can appear on windows. Fixes:
+            - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+                - This will enable the user to run the install scripts for npm
+            
+
+
+How to run this project:
+    - Liveserver
+    - Port 3000 using Express.js

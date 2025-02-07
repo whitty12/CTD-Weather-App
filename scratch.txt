@@ -1,0 +1,42 @@
+<---<div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+</div> -->
+
+<div class="weather-container">
+        <div class="weather-header" onclick="updateWeather()">Weather Forecast</div>
+        <div class="weather-forecast">
+            <div class="forecast-item">
+                <div class="current-weather-items">Current</div>
+                <div class="current-weather-code">Sunny</div>
+                <div class="weather-icon">☀️</div>
+                <p class="current-temperature">Loading...</p>
+                <p class="current-apparent-temperature">Feels like: N/A</p>
+            </div>
+            <div class="forecast-item">
+                <div class="tomorrow-weather-item">Tomorrow</div>
+                <div class="tomorrow-weather-code">Sunny</div>
+                <div class="weather-icon">🌧️</div>
+                <p class="tomorrow-temperature-max">Loading...</p>
+                <p class="tomorrow-temperature-min">Loading...</p>
+                <p class="tomorrow-apparent-temperature-max">High feels like: N/A</p>
+                <p class="tomorrow-apparent-temperature-low">Low feels like: N/A</p>
+            </div>
+            <div class="forecast-item">
+                <div class="day-after-weather-item">Day After Tomorrow</div>
+                <div class="day-after-weather-code">Cloudy</div>
+                <div class="weather-icon">☁️</div>
+                <p class="day-after-temperature-max">Loading...</p>
+                <p class="day-after-temperature-min">Loading...</p>
+                <p class="day-after-apparent-temperature-max">High feels like: N/A</p>
+                <p class="day-after-apparent-temperature-low">Low feels like: N/A</p>
+            </div>
+        </div>
+    </div>

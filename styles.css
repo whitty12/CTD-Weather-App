@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+
+body {
+  font-family: "Instrument Serif", serif;
+  background-color: rgb(40, 42, 49);
+  max-width: fit-content;
+  margin: auto;
+}
+
+h1 {
+  font-size: 40px;
+  text-decoration: underline;
+  color: white;
+  width: 50%;
+  max-width: fit-content;
+  margin-left: 12px;
+  text-align: center;
+  text-shadow: black;
+}
+
+button {
+  font-family: "Instrument serif", serif;
+  border-radius: 25px;
+  border: 2px solid black;
+  background-color: white;
+  margin: auto;
+}
+
+.current-container {
+  border-radius: 25px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: 2px solid black;
+  background-color: white;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+}
+
+.forecast-card {
+  border-radius: 25px;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  margin: 10px;
+  width: 25%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.current-forecast {
+  margin: auto;
+  overflow: hidden;
+}
+
+.current-day {
+  font-weight: bold;
+  font-size: 30px;
+  margin: auto;
+}
+
+.current-weather {
+  font-size: 30px;
+  margin: auto;
+}
+
+.current-details {
+  font-size: 60px;
+  padding-right: 138px;
+  padding-left: 80px;
+  text-align: center;
+  margin: auto;
+}
+
+.current-high-low {
+  text-align: center;
+  padding-top: 20px;
+  padding-right: 10px;
+  margin: auto;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.weekly-container {
+  text-align: center;
+  width: 90%;
+  justify-content: center;
+}
+
+#search-text {
+  font-family: "Instrument serif", serif;
+  border-radius: 25px;
+  border: 2px solid black;
+  width: 45%;
+  margin-left: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 20px;
+}
+
+#search-button {
+  width: 44%;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-right: 0px;
+  border-left: white solid 0.5px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+#temperature-button {
+  margin: auto;
+  width: 46%;
+  padding: 10px;
+  border-top: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 0px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  border-right: 0.5px solid white;
+}
+
+#precipitation-button {
+  width: 44.3%;
+  margin: auto;
+  padding: 10px;
+  border-top: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  border-left: 0.5px solid white;
+}
+
+#name-day {
+  overflow: hidden;
+}
+
+#daily-high {
+  padding: 5px;
+}
+
+#daily-low {
+  padding: 5px;
+}
