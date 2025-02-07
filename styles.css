@@ -87,6 +87,10 @@ button {
   justify-content: center;
 }
 
+.weather-icon {
+  font-size: 30px;
+}
+
 #search-text {
   font-family: "Instrument serif", serif;
   border-radius: 25px;

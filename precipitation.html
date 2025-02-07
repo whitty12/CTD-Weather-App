@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
-  <body onload="updatePrecipitation()">
+  <body onload="initializeWeather()">
     <div id="app">
       <h1 id="weather-header">Dream Weather App</h1>
 
@@ -22,7 +22,7 @@
         <div class="current-container" style="display: inline-flex">
           <div class="current-forecast">
             <p class="current-day">Day, Date</p>
-            <p class="weather-icon">ICON WOULD GO HERE</p>
+            <p class="weather-icon" id="current-icon">ICON WOULD GO HERE</p>
             <p class="current-weather">Broken Clouds</p>
           </div>
 
@@ -35,7 +35,7 @@
             <p class="current-gusts">Wind Gusts: 2m</p>
           </div>
         </div>
-        <button id="temperature-button" onclick="window.location.href='./index.html'+window.location.search;">
+        <button id="temperature-button" onclick="window.location.href='./index.html?search='+document.getElementById('search-text').value;">
           Temperature</button
         ><button id="precipitation-button" onclick="updatePrecipitation()">Precipitation</button>
       </section>
@@ -46,7 +46,7 @@
           <!--Tomorrow-->
           <div class="forecast-card">
             <p class="tomorrow" id="name-day">Tomorrow</p>
-            <p>ICON</p>
+            <p class="weather-icon" id="second-icon">ICON</p>
             <div class="weekly-high-low" style="display: inline-flex">
               <p class="precipitation-chance">20%</p>
             </div>
@@ -54,7 +54,7 @@
           <!--Third day-->
           <div class="forecast-card">
             <p class="third-day" id="name-day">Day</p>
-            <p>ICON</p>
+            <p class="weather-icon" id="third-icon">ICON</p>
             <div class="weekly-high-low" style="display: inline-flex">
               <p class="third-precipitation-chance" id="daily-high">0%</p>
             </div>
@@ -62,7 +62,7 @@
           <!--Fourth day-->
           <div class="forecast-card">
             <p class="fourth-day" id="name-day">Day</p>
-            <p>ICON</p>
+            <p class="weather-icon" id="fourth-icon">ICON</p>
             <div class="weekly-high-low" style="display: inline-flex">
               <p class="fourth-precipitation-chance" id="daily-high">20 %</p>
             </div>
@@ -70,7 +70,7 @@
           <!--Fifth day-->
           <div class="forecast-card">
             <p class="fifth-day" id="name-day">Day</p>
-            <p>ICON</p>
+            <p class="weather-icon" id="fifth-icon">ICON</p>
             <div class="weekly-high-low" style="display: inline-flex">
               <p class="fifth-precipitation-chance" id="daily-high">20%</p>
             </div>
@@ -78,7 +78,7 @@
           <!--Sixth day-->
           <div class="forecast-card">
             <p class="sixth-day" id="name-day">Day</p>
-            <p>ICON</p>
+            <p class="weather-icon" id="sixth-icon">ICON</p>
             <div class="weekly-high-low" style="display: inline-flex">
               <p class="sixth-precipitation-chance" id="daily-high">20%</p>
             </div>
@@ -86,7 +86,7 @@
           <!--Seventh day-->
           <div class="forecast-card">
             <p class="seventh-day" id="name-day">Day</p>
-            <p>ICON</p>
+            <p class="weather-icon" id="seventh-icon">ICON</p>
             <div class="weekly-high-low" style="display: inline-flex">
               <p class="seventh-precipitation-chance" id="daily-high">20%</p>
             </div>
