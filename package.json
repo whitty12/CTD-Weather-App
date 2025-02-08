@@ -1,6 +1,25 @@
 {
+  "name": "codethedream",
+  "version": "1.0.0",
+  "description": "Project Dependencies:\r     - Node.js\r     - Node Express\r     -",
+  "homepage": "https://github.com/whitty12/CTD-Weather-App#readme",
+  "bugs": {
+    "url": "https://github.com/whitty12/CTD-Weather-App/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whitty12/CTD-Weather-App.git"
+  },
+  "license": "ISC",
+  "author": "Stephanie Whitworth",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "dependencies": {
-    "express": "^4.21.2",
+    "express": "npm:Express@^3.0.1",
     "Express": "^3.0.1",
     "openmeteo": "^1.1.4"
   }
