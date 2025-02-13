@@ -17,5 +17,19 @@ Issues you may encounter while installing:
 
 
 How to run this project:
-    - Liveserver
-    - Port 3000 using Express.js
+    - Liveserver extension via Visual Code
+    - Port 4000 using Express.js
+
+Using Liveserver Extension:
+    - Use ctrl-shift-x to open the extension tab or navigate to the extension panel on the side.
+    - Install Live Server by Ritwick Day.
+    - Make sure you are in the project folder you wish to open.
+    - Right click on the file you wish to run and select "Run live server" or navigate to the visual code terminal and select the live server icon.
+    - This will open a page with everything loaded.
+
+Using express server:
+    - Open the terminal in VS code
+    - Run "npm start" in the command line
+    - navigate to localhost:4000
+    - Page is loaded!
+    
