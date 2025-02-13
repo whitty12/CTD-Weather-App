@@ -1,3 +1,8 @@
+Project Description:
+
+This is a very basic HTML/CSS project that runs Express for the server with the possiblity for a React implementation later. It reads data provided by OpenMeteo API to give a weather forecast for the next six days, as well as the current weather.
+
+
 Project Dependencies:
     - Node.js
     - Node Express
@@ -13,8 +18,6 @@ Issues you may encounter while installing:
         - This bug can appear on windows. Fixes:
             - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
                 - This will enable the user to run the install scripts for npm
-            
-
 
 How to run this project:
     - Liveserver extension via Visual Code
@@ -32,4 +35,10 @@ Using express server:
     - Run "npm start" in the command line
     - navigate to localhost:4000
     - Page is loaded!
+    - If onload fails to trigger, click the "temperature" button
     
+Recommended Improvements:
+    - Add color and images to the color scheme
+    - Fix the class and ID's of each portion of the html so it better aligns with naming conventions and makes the CSS more flexible
+    - Consider implementing React
+    - Add media queries to resize according to screen size (XL, L, M, Sm, Xs), React makes this easier
