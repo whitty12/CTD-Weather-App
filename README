@@ -42,3 +42,4 @@ Recommended Improvements:
     - Fix the class and ID's of each portion of the html so it better aligns with naming conventions and makes the CSS more flexible
     - Consider implementing React
     - Add media queries to resize according to screen size (XL, L, M, Sm, Xs), React makes this easier
+    - Condense all the individual queries in JS to a loop that increments (current approach is very naive and wouldn't be scalable)
