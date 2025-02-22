@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Temperature</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body onload="initializeWeather()">
+    <h1 id="weather-header">Dream Weather App</h1>
+    <div class="grid-container" id="app">
+      
+      <!--Search Bar Container-->
+      <!---Default latitude and longitude is value="-10.55152, -67.50496"-->
+      <div class="flex-container" id="searchbar-container">
+          <input
+            id="search-text"
+            type="text"
+            placeholder="Enter latitude, longitude..."
+          /><button id="search-button" onclick="getSearchText()">Search</button>
+      </div>
+
+      <!--Current Weather-->
+      <section>
+        <!-- Holds the current time's forecast -->
+        <div class="flex-container" id="current-container">
+              <div id="current-forecast">
+                <p id="current-day">Day, Date</p>
+                <p class="weather-icon" id="current-icon">ICON WOULD GO HERE</p>
+                <p id="current-weather">Broken Clouds</p>
+              </div>
+              <div id="current-details">
+                <p id="current-temperature">13°C</p>
+              </div>
+              <div id="current-high-low">
+                <p id="current-high">High: 15°C</p>
+                <p id="current-low">Low: 10°C</p>
+                <p id="current-apparent">Feels like: 15 C</p>
+              </div>
+        </div>
+      </section>
+      
+      <!--Container for button display-->
+      <div class="flex-container" id="button-container">
+      <!--Buttons for each page -->
+          <button id="temperature-button" onclick="updateWeather()">
+              Temperature</button
+            ><button
+              id="precipitation-button"
+              onclick="window.location.href='./precipitation.html?search='+document.getElementById('search-text').value;"
+            >
+              Precipitation
+          </button>
+      </div>
+      
+      <!--Forecast for the  week-->
+      <section>
+        <div class="flex-container" id="weekly-container">
+          <!--Tomorrow-->
+          <div class="forecast-card">
+            <p id="tomorrow" class= "name-day">Tomorrow</p>
+            <p class="weather-icon" id="second-icon">ICON</p>
+            <div class="weekly-high-low" style="display: inline-flex">
+              <p class="daily-high" id="tomorrow-high" >20°</p>
+              <p class="daily-low" id="tomorrow-low">13°</p>
+            </div>
+          </div>
+          <!--Second day-->
+          <div class="forecast-card">
+            <p id="third-day" class="name-day">Day</p>
+            <p class="weather-icon" id="third-icon">ICON</p>
+            <div class="weekly-high-low" style="display: inline-flex">
+              <p class="daily-high" id="third-high">20</p>
+              <p class="daily-low" id="third-low">13</p>
+            </div>
+          </div>
+          <!--third day-->
+          <div class="forecast-card">
+            <p id="fourth-day" class="name-day">Day</p>
+            <p class="weather-icon" id="fourth-icon">ICON</p>
+            <div class="weekly-high-low" style="display: inline-flex">
+              <p class="daily-high" id="fourth-high">20°</p>
+              <p class="daily-low" id="fourth-low">13°</p>
+            </div>
+          </div>
+          <!--fourth day-->
+          <div class="forecast-card">
+            <p id="fifth-day" class="name-day">Day</p>
+            <p class="weather-icon" id="fifth-icon">ICON</p>
+            <div class="weekly-high-low" style="display: inline-flex">
+              <p class="daily-high" id="fifth-high">20°</p>
+              <p class="daily-low" id="fifth-low">13°</p>
+            </div>
+          </div>
+          <!--fifth day-->
+          <div class="forecast-card">
+            <p id="sixth-day" class="name-day">Day</p>
+            <p class="weather-icon" id="sixth-icon">ICON</p>
+            <div class="weekly-high-low" style="display: inline-flex">
+              <p class="daily-high" id="sixth-high">20°</p>
+              <p class="daily-low" id="sixth-low">13°</p>
+            </div>
+          </div>
+          <!--sixth day-->
+          <div class="forecast-card">
+            <p id= "seventh-day" class="name-day">Day</p>
+            <p class="weather-icon" id="seventh-icon">ICON</p>
+            <div class="weekly-high-low" style="display: inline-flex">
+              <p class="daily-high" id="seventh-high">20°</p>
+              <p class="daily-low" id="seventh-low">13°</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./index.js" defer></script>
+  </body>
+</html>
