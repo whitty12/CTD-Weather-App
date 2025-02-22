@@ -10,10 +10,9 @@ body {
 
 button{
   font-size: 16px;
-  background-color: #3498db;
-  border: solid;
+  background-color: whitesmoke;
+  border: 2px solid;
   border-color: black;
-  color: white;
   text-align: center;  /* Centers text inside the button */
   transition: background-color 0.3s ease;
 }
@@ -71,7 +70,7 @@ h1 {
 }
 
 #searchbar-container {
-  
+
 }
 
 #button-container{
