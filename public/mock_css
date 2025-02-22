@@ -167,3 +167,17 @@ h1 {
 .daily-low {
    padding: 5px;
 }
+
+/*//////////////////////////// Media Queries /////////////////////////////////////////////////////*/
+/* Media query for small screens medium */
+@media (max-width: 1024px) {
+  .weekly-container {
+    flex-direction: column;  /* Stack items vertically on small screens */
+    align-items: stretch;
+  }
+  
+  .forecast-card {
+    flex: 1;
+    width:100%
+  }
+}
