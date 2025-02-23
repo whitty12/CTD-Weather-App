@@ -7,88 +7,89 @@
   </head>
 
   <body onload="initializeWeather()">
-    <div id="app">
-      <h1 id="weather-header">Dream Weather App</h1>
-
+    <div class="grid-container" id="app">
+      <h1 id="weather-header">Weather</h1>
       <!--Search Bar-->
-      <input
-        id="search-text"
-        type="text"
-        placeholder="Enter latitude, longitude..."
-      /><button id="search-button" onclick="getSearchText()">Search</button>
+      <div class="flex-container" id="searchbar-container">
+        <input
+          id="search-text"
+          type="text"
+          placeholder="Enter latitude, longitude..."
+        /><button id="search-button" onclick="getSearchText()">Search</button>
+      </div>
 
       <!--Current Weather-->
       <section>
-        <div class="current-container" style="display: inline-flex">
-          <div class="current-forecast">
-            <p class="current-day">Day, Date</p>
-            <p class="weather-icon" id="current-icon">ICON WOULD GO HERE</p>
-            <p class="current-weather">Broken Clouds</p>
-          </div>
-
-          <div class="current-details">
-            <p class="current-precipitation">N/A</p>
-          </div>
-
-          <div class="current-high-low">
-            <p class="current-humidity">Humidity: 5%</p>
-            <p class="current-gusts">Wind Gusts: 2m</p>
-          </div>
+        <div class="flex-container" id="current-container">
+            <div id="current-forecast">
+              <p id="current-day">Day, Date</p>
+              <p class="weather-icon" id="current-icon">ICON WOULD GO HERE</p>
+              <p id="current-weather">Broken Clouds</p>
+            </div>
+            <div id="current-details">
+              <p id="current-precipitation">N/A</p>
+            </div>
+            <div id="current-high-low">
+              <p id="current-humidity">Humidity: 5%</p>
+              <p id="current-gusts">Wind Gusts: 2m</p>
+            </div>
         </div>
-        <button id="temperature-button" onclick="window.location.href='./index.html?search='+document.getElementById('search-text').value;">
-          Temperature</button
-        ><button id="precipitation-button" onclick="updatePrecipitation()">Precipitation</button>
+        <div class="flex-container" id="button-container">
+          <button id="temperature-button" onclick="window.location.href='./index.html?search='+document.getElementById('search-text').value;">
+            Temperature</button
+          ><button id="precipitation-button" onclick="updatePrecipitation()">Precipitation</button>
+        </div>
       </section>
 
       <!--Forecast for the  week-->
       <section>
-        <div class="weekly-container" style="display: inline-flex">
+        <div class="flex-container" id="weekly-container">
           <!--Tomorrow-->
           <div class="forecast-card">
-            <p class="tomorrow" id="name-day">Tomorrow</p>
+            <p  class="name-day" id="tomorrow">Tomorrow</p>
             <p class="weather-icon" id="second-icon">ICON</p>
-            <div class="weekly-high-low" style="display: inline-flex">
-              <p class="precipitation-chance">20%</p>
+            <div class="daily-data">
+              <p class="daily-precipitation">20%</p>
             </div>
           </div>
           <!--Third day-->
           <div class="forecast-card">
-            <p class="third-day" id="name-day">Day</p>
+            <p class="name-day" id="third-day" id="name-day">Day</p>
             <p class="weather-icon" id="third-icon">ICON</p>
-            <div class="weekly-high-low" style="display: inline-flex">
-              <p class="third-precipitation-chance" id="daily-high">0%</p>
+            <div class="daily-data">
+              <p class="daily-precipitation" id="third-precipitation-chance">0%</p>
             </div>
           </div>
           <!--Fourth day-->
           <div class="forecast-card">
-            <p class="fourth-day" id="name-day">Day</p>
+            <p class="name-day" id="fourth-day">Day</p>
             <p class="weather-icon" id="fourth-icon">ICON</p>
-            <div class="weekly-high-low" style="display: inline-flex">
-              <p class="fourth-precipitation-chance" id="daily-high">20 %</p>
+            <div class="daily-data">
+              <p class="daily-precipitation" id="fourth-precipitation-chance">20 %</p>
             </div>
           </div>
           <!--Fifth day-->
           <div class="forecast-card">
-            <p class="fifth-day" id="name-day">Day</p>
+            <p class="name-day" id="fifth-day" >Day</p>
             <p class="weather-icon" id="fifth-icon">ICON</p>
-            <div class="weekly-high-low" style="display: inline-flex">
-              <p class="fifth-precipitation-chance" id="daily-high">20%</p>
+            <div class="daily-data">
+              <p class="daily-precipitation" id="fifth-precipitation-chance">20%</p>
             </div>
           </div>
           <!--Sixth day-->
           <div class="forecast-card">
-            <p class="sixth-day" id="name-day">Day</p>
+            <p class="name-day" id="sixth-day">Day</p>
             <p class="weather-icon" id="sixth-icon">ICON</p>
-            <div class="weekly-high-low" style="display: inline-flex">
-              <p class="sixth-precipitation-chance" id="daily-high">20%</p>
+            <div class="daily-data">
+              <p class="daily-precipitation" id="sixth-precipitation-chance">20%</p>
             </div>
           </div>
           <!--Seventh day-->
           <div class="forecast-card">
-            <p class="seventh-day" id="name-day">Day</p>
+            <p class="name-day" id="seventh-day">Day</p>
             <p class="weather-icon" id="seventh-icon">ICON</p>
-            <div class="weekly-high-low" style="display: inline-flex">
-              <p class="seventh-precipitation-chance" id="daily-high">20%</p>
+            <div class="daily-data">
+              <p class="daily-precipitation" id="seventh-precipitation-chance">20%</p>
             </div>
           </div>
         </div>

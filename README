@@ -6,7 +6,6 @@ This is a very basic HTML/CSS project that runs Express for the server with the 
 Project Dependencies:
     - Node.js
     - Node Express
-    - 
 
 Issues you may encounter while installing:
     - npm not found

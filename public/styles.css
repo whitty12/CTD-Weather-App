@@ -1,154 +1,308 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 
+
+/*/////////////////////////////////////////           Base tag modifications          //////////////////////////////////////////*/
+
 body {
   font-family: "Instrument Serif", serif;
-  background-color: rgb(40, 42, 49);
-  max-width: fit-content;
-  margin: auto;
+  background: rgb(2,0,36);
+  background: linear-gradient(150deg, rgba(2,0,36,1) 0%, rgba(65,212,241,1) 100%, rgba(255,255,255,1) 100%);
+  background-attachment: fixed; /*Prevents the background from repeating across the entire screen*/
 }
 
+button{
+  font-family: "Instrument serif", serif;
+  font-size: 20px;
+  background-color: black;
+  color: white;  
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/*Headers*/
 h1 {
   font-size: 40px;
   text-decoration: underline;
   color: white;
-  width: 50%;
-  max-width: fit-content;
-  margin-left: 12px;
   text-align: center;
-  text-shadow: black;
+  margin-top: 40px;
 }
 
-button {
-  font-family: "Instrument serif", serif;
-  border-radius: 25px;
-  border: 2px solid black;
-  background-color: white;
-  margin: auto;
+/*///////////////////////////////       Containers and sub-containers    ///////////////////////////////////////////////////////////*/
+
+
+/*Layout for all the weather information. We define 4 rows: search bar, current, buttons, and the rest of the week's forecast. */
+.grid-container{
+  display: inline-grid;
+  grid-template-rows: auto auto auto auto;
+  width: 100%;
+  height: 100%;
+  padding-top: 3%;
 }
 
-.current-container {
-  border-radius: 25px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border: 2px solid black;
-  background-color: white;
-  width: 90%;
+/*Defines generic rules for the sub-container flexbox*/
+.flex-container{
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/*Sub-container ID's*/
+
+/*Layout for container holding the information for this current time */
+#current-container {
+  flex: 1;
+  margin-top:10px;
+  margin-bottom: 10px;
+  background-color: whitesmoke;
   text-align: center;
-  margin: auto;
+}
+
+/*Layout for container holding the information for the rest of the week's forecast */
+#weekly-container {
+  flex:1;
+  overflow: hidden;
+  gap: 10px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+#searchbar-container {
+
+}
+
+#button-container{
+  display: flex;  /* Make it a flex container */
   justify-content: center;
+  width: 100%;  /* Makes sure the container takes up full width */
 }
+
+
+/*//////////////////////////////////////// Search Bar Components  ///////////////////////////////////////////////////*/
+
+
+#search-button {
+  flex: 1;
+}
+
+#search-text {
+  flex:1;
+  font-family: "Instrument serif", serif;
+  font-size: 20px;
+  
+}
+
+
+/*//////////////////////////////////// Forecast Button components ///////////////////////////////////////////////////*/
+
+#temperature-button {
+  flex: 1;
+  padding: 5px;
+}
+
+#precipitation-button {
+  flex: 1;
+  padding: 5px;
+}
+
+/*///////////////////////////////////////            Forecast classes          ///////////////////////////*/
+
 
 .forecast-card {
+  text-align: center;
+  flex:1;
   border-radius: 25px;
   background-color: whitesmoke;
-  border: 2px solid black;
+  border: 1px solid black;
   margin: 10px;
   width: 25%;
   font-size: 20px;
   font-weight: bold;
 }
-
-.current-forecast {
-  margin: auto;
-  overflow: hidden;
-}
-
-.current-day {
-  font-weight: bold;
-  font-size: 30px;
-  margin: auto;
-}
-
-.current-weather {
-  font-size: 30px;
-  margin: auto;
-}
-
-.current-details {
-  font-size: 60px;
-  padding-right: 138px;
-  padding-left: 80px;
-  text-align: center;
-  margin: auto;
-}
-
-.current-high-low {
-  text-align: center;
-  padding-top: 20px;
-  padding-right: 10px;
-  margin: auto;
-  overflow: hidden;
-  font-size: 20px;
-}
-
-.weekly-container {
-  text-align: center;
-  width: 90%;
-  justify-content: center;
-}
-
 .weather-icon {
   font-size: 30px;
 }
 
-#search-text {
-  font-family: "Instrument serif", serif;
-  border-radius: 25px;
-  border: 2px solid black;
-  width: 45%;
-  margin-left: 10px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  font-size: 20px;
-}
 
-#search-button {
-  width: 44%;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-right: 0px;
-  border-left: white solid 0.5px;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-}
+/*//////////////////////////////////////     Current Forecast Components         //////////////////////////////*/
 
-#temperature-button {
-  margin: auto;
-  width: 46%;
-  padding: 10px;
-  border-top: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-top-left-radius: 0px;
-  font-size: 20px;
-  background-color: black;
-  color: white;
-  border-right: 0.5px solid white;
-}
-
-#precipitation-button {
-  width: 44.3%;
-  margin: auto;
-  padding: 10px;
-  border-top: 0px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-top-right-radius: 0px;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  border-left: 0.5px solid white;
-}
-
-#name-day {
+#current-forecast {
   overflow: hidden;
 }
 
-#daily-high {
-  padding: 5px;
+#current-day {
+  font-weight: bold;
+  font-size: 30px;
 }
 
-#daily-low {
-  padding: 5px;
+#current-weather {
+  font-size: 30px;
+}
+
+#current-details {
+  overflow: hidden;
+  font-size: 40px;
+}
+
+#current-high-low {
+  text-align: center;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+/*////////////////////////////////Forecast Card Elements///////////////////////////////////////////*/
+
+/*nothing is needed at the moment for this class*/
+.weekly-high-low{}
+
+.name-day {
+  overflow: hidden;
+}
+
+.daily-high {
+   padding: 5px;
+}
+
+.daily-low {
+   padding: 5px;
+}
+
+/*//////////////////////////// Media Queries /////////////////////////////////////////////////////*/
+/* Media query for small screens medium */
+@media (max-width: 1024px) {
+  .grid-container{
+    display: grid;
+    padding-top: 0;
+    max-width: 60%;
+    max-height: 60%;
+    align-self: stretch;
+    margin-left: 30%;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    background-color: DodgerBlue;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .weather-container{
+    margin: 0;
+  }
+  
+  .forecast-card {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+    padding: 0;
+    width: auto;
+    height: auto;
+    font-weight: bold;
+  }
+  .weather-icon{
+    font-size:40px;
+    text-align: center;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+  }
+  .name-day {
+    overflow: hidden;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  
+  .daily-data{
+    display: inline-block;
+    text-align: left;
+  }
+
+  .daily-precipitation{
+    text-align: center;
+  }
+  
+  button{
+    font-family: "Instrument serif", serif;
+    font-size: 20px;
+    background-color: black;
+    color: white;  
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  h1 {
+    font-size: 40px;
+    text-decoration: underline;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-left: 20%;
+  }
+
+  #current-container {
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 0;
+    margin-top:0;
+    margin-bottom: 0;
+    background-color: whitesmoke;
+    text-align: center;
+  }
+  
+  #current-forecast {
+    overflow: hidden;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #current-day {
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  
+  #current-details {
+    overflow: hidden;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #current-high-low {
+    text-align: center;
+    overflow: hidden;
+    font-size: 20px;
+  }
+  
+  #button-container{
+    display: flex;  /* Make it a flex container */
+    justify-content: center;
+    width: 100%;  /* Makes sure the container takes up full width */
+  }
+  #search-button {
+    flex-grow: 1;
+  }
+  
+  #search-text {
+    flex-grow:1;
+    font-family: "Instrument serif", serif;
+    
+  }
+  
+  #temperature-button {
+    flex-grow: 1;
+    padding: 0px;
+  }
+  
+  #precipitation-button {
+    flex-grow: 1;
+    padding: 0px;
+  }
+
 }

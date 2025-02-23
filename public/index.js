@@ -200,42 +200,42 @@ function updatePrecipitation(){
 		})
 		.then(data => {
 			//load the data for this moment
-			document.querySelector(".current-precipitation").innerText = (data.current.precipitation * 100) + '%';
-			document.querySelector(".current-weather").innerText = parseWeatherCode(data.current.weather_code);
+			document.getElementById("current-precipitation").innerText = (data.current.precipitation * 100) + '%';
+			document.getElementById("current-weather").innerText = parseWeatherCode(data.current.weather_code);
 			//add the physical time later
-			document.querySelector(".current-day").innerText = timestampToDay(data.daily.time[0]);
-			document.querySelector(".current-gusts").innerText = "Wind Gusts: " + data.current.wind_gusts_10m;
-			document.querySelector(".current-humidity").innerText = "Humidity: " + data.current.relative_humidity_2m;
+			document.getElementById("current-day").innerText = timestampToDay(data.daily.time[0]);
+			document.getElementById("current-gusts").innerText = "Wind Gusts: " + data.current.wind_gusts_10m;
+			document.getElementById("current-humidity").innerText = "Humidity: " + data.current.relative_humidity_2m;
 			document.getElementById('current-icon').innerText = changeWeatherIcon(data.current.weather_code);
 
 			//load the data for tomorrow
-			document.querySelector('.tomorrow').innerText = timestampToDay(data.daily.time[1]);
-			document.querySelector('.precipitation-chance').innerText = data.daily.precipitation_probability_max[1] + '%';
+			document.getElementById('tomorrow').innerText = timestampToDay(data.daily.time[1]);
+			document.querySelector('.daily-precipitation').innerText = data.daily.precipitation_probability_max[1] + '%';
 			document.getElementById('second-icon').innerText = changeWeatherIcon(data.daily.weather_code[1]);
 			
 			//load the data for the third day
-			document.querySelector('.third-day').innerText = timestampToDay(data.daily.time[2]);
-			document.querySelector('.third-precipitation-chance').innerText = data.daily.precipitation_probability_max[2] + '%';
+			document.getElementById('third-day').innerText = timestampToDay(data.daily.time[2]);
+			document.getElementById('third-precipitation-chance').innerText = data.daily.precipitation_probability_max[2] + '%';
 			document.getElementById('third-icon').innerText = changeWeatherIcon(data.daily.weather_code[2]);
 		
 			//load the data for the fourth day
-			document.querySelector('.fourth-day').innerText = timestampToDay(data.daily.time[3]);
-			document.querySelector('.fourth-precipitation-chance').innerText = data.daily.precipitation_probability_max[3] + '%';
+			document.getElementById('fourth-day').innerText = timestampToDay(data.daily.time[3]);
+			document.getElementById('fourth-precipitation-chance').innerText = data.daily.precipitation_probability_max[3] + '%';
 			document.getElementById('fourth-icon').innerText = changeWeatherIcon(data.daily.weather_code[3]);
 
 			//load the data for the fifth day
-			document.querySelector('.fifth-day').innerText = timestampToDay(data.daily.time[4]);
-			document.querySelector('.fifth-precipitation-chance').innerText = data.daily.precipitation_probability_max[4] + '%';
+			document.getElementById('fifth-day').innerText = timestampToDay(data.daily.time[4]);
+			document.getElementById('fifth-precipitation-chance').innerText = data.daily.precipitation_probability_max[4] + '%';
 			document.getElementById('fifth-icon').innerText = changeWeatherIcon(data.daily.weather_code[4]);
 			
 			//load the data for the sixth day
-			document.querySelector('.sixth-day').innerText = timestampToDay(data.daily.time[5]);
-			document.querySelector('.sixth-precipitation-chance').innerText = data.daily.precipitation_probability_max[5] + '%';
+			document.getElementById('sixth-day').innerText = timestampToDay(data.daily.time[5]);
+			document.getElementById('sixth-precipitation-chance').innerText = data.daily.precipitation_probability_max[5] + '%';
 			document.getElementById('sixth-icon').innerText = changeWeatherIcon(data.daily.weather_code[5]);
 
 			//load the data for the seventh day
-			document.querySelector('.seventh-day').innerText = timestampToDay(data.daily.time[6]);
-			document.querySelector('.seventh-precipitation-chance').innerText = data.daily.precipitation_probability_max[6] + '%';
+			document.getElementById('seventh-day').innerText = timestampToDay(data.daily.time[6]);
+			document.getElementById('seventh-precipitation-chance').innerText = data.daily.precipitation_probability_max[6] + '%';
 			document.getElementById('seventh-icon').innerText = changeWeatherIcon(data.daily.weather_code[6]);
 
 			console.log(data);
@@ -255,49 +255,49 @@ function updateWeather(){
 		})
 		.then(data => {
 			//load the data for this moment
-			document.querySelector(".current-temperature").innerText = data.current.temperature_2m + ' C';
-			document.querySelector(".current-weather").innerText = parseWeatherCode(data.current.weather_code);
+			document.getElementById("current-temperature").innerText = data.current.temperature_2m + ' C';
+			document.getElementById("current-weather").innerText = parseWeatherCode(data.current.weather_code);
 			//add the physical time later
-			document.querySelector(".current-day").innerText = timestampToDay(data.daily.time[0]);
-			document.querySelector(".current-apparent").innerText = 'Feels like: ' + data.current.apparent_temperature;
-			document.querySelector(".current-high").innerText = "High: " + data.daily.temperature_2m_max[0];
-			document.querySelector(".current-low").innerText = "Low: " + data.daily.temperature_2m_min[0];
+			document.getElementById("current-day").innerText = timestampToDay(data.daily.time[0]);
+			document.getElementById("current-apparent").innerText = 'Feels like: ' + data.current.apparent_temperature;
+			document.getElementById("current-high").innerText = "High: " + data.daily.temperature_2m_max[0];
+			document.getElementById("current-low").innerText = "Low: " + data.daily.temperature_2m_min[0];
 			document.getElementById('current-icon').innerText = changeWeatherIcon(data.current.weather_code);
 
 			//load the data for tomorrow
-			document.querySelector('.tomorrow').innerText = timestampToDay(data.daily.time[1]);
-			document.querySelector('.tomorrow-high').innerText = data.daily.temperature_2m_max[1];
-			document.querySelector('.tomorrow-low').innerText = data.daily.temperature_2m_min[1];
+			document.getElementById('tomorrow').innerText = timestampToDay(data.daily.time[1]);
+			document.getElementById('tomorrow-high').innerText = data.daily.temperature_2m_max[1];
+			document.getElementById('tomorrow-low').innerText = data.daily.temperature_2m_min[1];
 			document.getElementById('second-icon').innerText = changeWeatherIcon(data.daily.weather_code[1]);
 			
 			//load the data for the third day
-			document.querySelector('.third-day').innerText = timestampToDay(data.daily.time[2]);
-			document.querySelector('.third-high').innerText = data.daily.temperature_2m_max[2];
-			document.querySelector('.third-low').innerText = data.daily.temperature_2m_min[2];
+			document.getElementById('third-day').innerText = timestampToDay(data.daily.time[2]);
+			document.getElementById('third-high').innerText = data.daily.temperature_2m_max[2];
+			document.getElementById('third-low').innerText = data.daily.temperature_2m_min[2];
 			document.getElementById('third-icon').innerText = changeWeatherIcon(data.daily.weather_code[2]);
 
 			//load the data for the fourth day
-			document.querySelector('.fourth-day').innerText = timestampToDay(data.daily.time[3]);
-			document.querySelector('.fourth-high').innerText = data.daily.temperature_2m_max[3];
-			document.querySelector('.fourth-low').innerText = data.daily.temperature_2m_min[3];
+			document.getElementById('fourth-day').innerText = timestampToDay(data.daily.time[3]);
+			document.getElementById('fourth-high').innerText = data.daily.temperature_2m_max[3];
+			document.getElementById('fourth-low').innerText = data.daily.temperature_2m_min[3];
 			document.getElementById('fourth-icon').innerText = changeWeatherIcon(data.daily.weather_code[3]);
 
 			//load the data for the fifth day
-			document.querySelector('.fifth-day').innerText = timestampToDay(data.daily.time[4]);
-			document.querySelector('.fifth-high').innerText = data.daily.temperature_2m_max[4];
-			document.querySelector('.fifth-low').innerText = data.daily.temperature_2m_min[4];
+			document.getElementById('fifth-day').innerText = timestampToDay(data.daily.time[4]);
+			document.getElementById('fifth-high').innerText = data.daily.temperature_2m_max[4];
+			document.getElementById('fifth-low').innerText = data.daily.temperature_2m_min[4];
 			document.getElementById('fifth-icon').innerText = changeWeatherIcon(data.daily.weather_code[4]);
 
 			//load the data for the sixth day
-			document.querySelector('.sixth-day').innerText = timestampToDay(data.daily.time[5]);
-			document.querySelector('.sixth-high').innerText = data.daily.temperature_2m_max[5];
-			document.querySelector('.sixth-low').innerText = data.daily.temperature_2m_min[5];
+			document.getElementById('sixth-day').innerText = timestampToDay(data.daily.time[5]);
+			document.getElementById('sixth-high').innerText = data.daily.temperature_2m_max[5];
+			document.getElementById('sixth-low').innerText = data.daily.temperature_2m_min[5];
 			document.getElementById('sixth-icon').innerText = changeWeatherIcon(data.daily.weather_code[5]);
 
 			//load the data for the seventh day
-			document.querySelector('.seventh-day').innerText = timestampToDay(data.daily.time[6]);
-			document.querySelector('.seventh-high').innerText = data.daily.temperature_2m_max[6];
-			document.querySelector('.seventh-low').innerText = data.daily.temperature_2m_min[6];
+			document.getElementById('seventh-day').innerText = timestampToDay(data.daily.time[6]);
+			document.getElementById('seventh-high').innerText = data.daily.temperature_2m_max[6];
+			document.getElementById('seventh-low').innerText = data.daily.temperature_2m_min[6];
 			document.getElementById('seventh-icon').innerText = changeWeatherIcon(data.daily.weather_code[6]);
 
 			console.log(data);

@@ -8,6 +8,7 @@ body {
   background: rgb(2,0,36);
   background: linear-gradient(150deg, rgba(2,0,36,1) 0%, rgba(65,212,241,1) 100%, rgba(255,255,255,1) 100%);
   background-attachment: fixed; /*Prevents the background from repeating across the entire screen*/
+}
 
 button{
   font-family: "Instrument serif", serif;
