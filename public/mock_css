@@ -6,7 +6,7 @@
 body {
   font-family: "Instrument Serif", serif;
   background: rgb(2,0,36);
-background: linear-gradient(150deg, rgba(2,0,36,1) 0%, rgba(65,212,241,1) 100%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(150deg, rgba(2,0,36,1) 0%, rgba(65,212,241,1) 100%, rgba(255,255,255,1) 100%);
   background-attachment: fixed; /*Prevents the background from repeating across the entire screen*/
 
 button{
@@ -111,7 +111,6 @@ h1 {
 .forecast-card {
   text-align: center;
   flex:1;
-  /*TODO: Wrap vertically on a small screen*/
   border-radius: 25px;
   background-color: whitesmoke;
   border: 1px solid black;
@@ -171,13 +170,122 @@ h1 {
 /*//////////////////////////// Media Queries /////////////////////////////////////////////////////*/
 /* Media query for small screens medium */
 @media (max-width: 1024px) {
-  .weekly-container {
-    flex-direction: column;  /* Stack items vertically on small screens */
-    align-items: stretch;
+  .grid-container{
+    display: grid;
+    padding-top: 0; 
+
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    background-color: DodgerBlue;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .weather-container{
+    margin: 0;
   }
   
   .forecast-card {
-    flex: 1;
-    width:100%
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+    padding: 0;
+    width: auto;
+    height: auto;
+    font-weight: bold;
   }
+  .weather-icon{
+    font-size:20px;
+    text-align: center;
+    justify-content: flex-start;
+  }
+  .name-day {
+    overflow: hidden;
+    justify-content: flex-start;
+  }
+  
+  .weekly-high-low{
+    text-align: right;
+  }
+  
+  button{
+    font-family: "Instrument serif", serif;
+    font-size: 20px;
+    background-color: black;
+    color: white;  
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  /*Headers*/
+  h1 {
+    font-size: 40px;
+    text-decoration: underline;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  #current-container {
+    flex: 1;
+    flex-direction: column;
+    padding: 0;
+    margin-top:0;
+    margin-bottom: 0;
+    background-color: whitesmoke;
+    text-align: center;
+  }
+  
+  #current-forecast {
+    overflow: hidden;
+  }
+  
+  #current-day {
+    font-weight: bold;
+
+  }
+  
+  #current-details {
+    overflow: hidden;
+    font-size: 30px;
+  }
+  
+  #current-high-low {
+    text-align: center;
+    overflow: hidden;
+    font-size: 14px;
+  }
+  
+  #button-container{
+    display: flex;  /* Make it a flex container */
+    justify-content: center;
+    width: fit%;  /* Makes sure the container takes up full width */
+  }
+  #search-button {
+    flex: 1;
+  }
+  
+  #search-text {
+    flex:1;
+    font-family: "Instrument serif", serif;
+    
+  }
+  
+  #temperature-button {
+    flex: 1;
+    padding: 0px;
+  }
+  
+  #precipitation-button {
+    flex: 1;
+    padding: 0px;
+  }
+
 }
