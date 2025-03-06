@@ -1,31 +1,27 @@
-Project Description:
-This is a very basic HTML/CSS project that runs Express for the server with the possiblity for a React implementation later. It reads data provided by OpenMeteo API to give a weather forecast for the next six days, as well as the current weather.
+## Project Description:
+This is a very basic HTML/CSS project that runs Express for the server. It reads data provided by OpenMeteo API to give a weather forecast for the next six days, as well as the current weather.
 
-Project Dependencies:
+## Project Dependencies:
     - Node.js
     - Node Express
     - Javascript
 
-Options to run this project:
-    - Liveserver extension via Visual Code
-    - Port 4000 using Express.js
+## Run
 
-Using Express Server:
-    (1) Open the terminal in VS code
+### Using Express Server:
+    (1) Open the terminal
     (2) Run "npm start" in the command line
     (3) navigate to localhost:4000
     (4) Page is loaded!
-   
-    Note: If onload fails to trigger, click the "temperature" button
 
-Using Liveserver Extension in VS Code:
+### Using Liveserver Extension in VS Code:
     (1) Use ctrl-shift-x to open the extension tab or navigate to the extension panel on the side navigationbar in VS Code.
     (2) Install Live Server by Ritwick Day.
     (3) Make sure you are in the project folder you wish to open.
     (4) Right click on the file you wish to run and select "Run live server" or navigate to the Visual Vode terminal and select the live server   icon.
     (5) This will open a page with everything loaded.
 
-Issues you may encounter while installing:
+## Issues you may encounter while installing:
     (1) npm not found
         - Fixes:
             - Restart VSCode
@@ -36,15 +32,12 @@ Issues you may encounter while installing:
             - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
                 - This will enable the user to run the install scripts for npm
 
-Navigation:
+## Navigation:
     (1) Input must be a valid latitutde and longitude number or the system will display an error and do nothing.
     (2) You can use either press enter or use the search button to get the weather at a latitude and longitude
     (3) The temperature and precipitation buttons navigate between two pages with different information regarding humidity and climate.
 
-Recommended Improvements:
-    - Add color and images to the color scheme
-    - Fix the class and ID's of each portion of the html so it better aligns with naming conventions and makes the CSS more flexible
-    - Consider implementing React
+## Recommended Improvements:
     - Use a CSS framework such as Bootstrap
     - Implementing in React to make the web page more scalable
-    - Condense all the individual queries in JS to a loop that increments. The current approach is very naive and wouldn't be scalable, but is not needed for a weekly forecast.
+    - Condense all the individual element selectors in JS to using a method that builds from a template. The current approach is very naive and wouldn't be scalable, but is not needed for a weekly forecast.
