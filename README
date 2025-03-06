@@ -35,7 +35,12 @@ Issues you may encounter while installing:
         - This bug can appear on windows. Fixes:
             - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
                 - This will enable the user to run the install scripts for npm
-    
+
+Navigation:
+    (1) Input must be a valid latitutde and longitude number or the system will display an error and do nothing.
+    (2) You can use either press enter or use the search button to get the weather at a latitude and longitude
+    (3) The temperature and precipitation buttons navigate between two pages with different information regarding humidity and climate.
+
 Recommended Improvements:
     - Add color and images to the color scheme
     - Fix the class and ID's of each portion of the html so it better aligns with naming conventions and makes the CSS more flexible
