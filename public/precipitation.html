@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Precipitaion</title>
+    <title>Precipitation</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -9,15 +9,17 @@
   <body onload="initializeWeather()">
     <div class="grid-container" id="app">
       <h1 id="weather-header">Weather</h1>
+      <!--Error Messages -->
+      <div class="error"><p class="error-text"></p></div>
       <!--Search Bar-->
       <div class="flex-container" id="searchbar-container">
         <input
           id="search-text"
           type="text"
           placeholder="Enter latitude, longitude..."
+          onkeydown="handleKeyPress(event)"
         /><button id="search-button" onclick="getSearchText()">Search</button>
       </div>
-
       <!--Current Weather-->
       <section>
         <div class="flex-container" id="current-container">
@@ -97,5 +99,12 @@
     </div>
 
     <script src="./index.js"></script>
+    <script>
+      function handleKeyPress(event) {
+        if (event.key === "Enter") {
+          getSearchText();
+        }
+      }
+    </script>
   </body>
 </html>

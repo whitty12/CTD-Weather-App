@@ -9,7 +9,9 @@
   <body onload="initializeWeather()">
     
     <div class="grid-container" id="app">
-      <h1>Weather</h1>
+      <h1 id="weather-header">Weather</h1>
+      <!-- Error Field-->
+      <div class="error"><p class="error-text"></p></div>
       <!--Search Bar Container-->
       <!---Default latitude and longitude is value="-10.55152, -67.50496"-->
       <div class="flex-container" id="searchbar-container">
@@ -17,6 +19,7 @@
             id="search-text"
             type="text"
             placeholder="Enter latitude, longitude..."
+            onkeydown="handleKeyPress(event)"
           /><button id="search-button" onclick="getSearchText()">Search</button>
       </div>
 
@@ -113,5 +116,12 @@
     </div>
 
     <script src="./index.js" defer></script>
+    <script>
+      function handleKeyPress(event) {
+        if (event.key === "Enter") {
+          getSearchText();
+        }
+      }
+    </script>
   </body>
 </html>

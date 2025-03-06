@@ -7,7 +7,6 @@ var url = "https://api.open-meteo.com/v1/forecast?latitude=" + userLat + "&longi
 //precipitation and wind gusts
 var conditionsURL = "https://api.open-meteo.com/v1/forecast?latitude=" + userLat + "&longitude=" + userLong + "&current=relative_humidity_2m,precipitation,weather_code,wind_gusts_10m&daily=weather_code,precipitation_sum,precipitation_probability_max";
 
-
 //contains the weather codes for each key
 const weatherCodeDict = {
 	'0': 'Clear Skies',
@@ -74,7 +73,7 @@ const iconDictionary = {
 };
 
 function splitInput(string) {
-	return string.split(",").map(function(item) {
+	return string.split(/[ ,]+/).map(function(item) {
 		return item.trim();
 	  });
 }
@@ -82,9 +81,20 @@ function splitInput(string) {
 //takes latitude, longitude arr of size two and sees if it is a number
 function searchIsValid(inputArr) {
 	if(isNaN(inputArr[0]) || isNaN(inputArr[1])){
+		document.getElementById('search-text').value = "Query empty.";
+		return false;
+	}
+	if(containsLetters == true){
 		return false;
 	}
 	return true;
+}
+//check for letters in coorinates
+function containsLetters(str) {
+    if(/[a-zA-Z]/.test(str) == true){
+		return true;
+	}
+	return false;
 }
 
 //Use default latitude/longitude
@@ -161,12 +171,15 @@ function getSearchText(){
 
 		userLong = inputArr[1];
 		console.log(userLong);
+		document.querySelector(".error-text").innerText = null;
 	}
 	else{
 		document.getElementById("search-text").value = '';
 
-		//throw error
-		throw new Error("Please input a number for latitude and longitude.");
+		//log error and display to user
+		document.querySelector(".error-text").innerText = "Please input a number for latitude and longitude!";
+		console.error("Please input a number for latitude and longitude.");
+
 	}
 
 	//update temperature url
@@ -190,6 +203,7 @@ function getSearchText(){
 	console.log(url);
 }
 
+//Updates the page containing the information for precipitation
 function updatePrecipitation(){
 	fetch(conditionsURL).then(response =>
 		{

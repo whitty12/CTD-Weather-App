@@ -68,9 +68,7 @@ h1 {
   background-color: transparent;
 }
 
-#searchbar-container {
-
-}
+#searchbar-container {}
 
 #button-container{
   display: flex;  /* Make it a flex container */
@@ -78,10 +76,12 @@ h1 {
   width: 100%;  /* Makes sure the container takes up full width */
 }
 
-
+/*//////////////////////////////////////// Error Messages ///////////////////////////////////////////////////*/
+.error-text {
+  color: red !important;
+  font-size: 15px !important;
+}
 /*//////////////////////////////////////// Search Bar Components  ///////////////////////////////////////////////////*/
-
-
 #search-button {
   flex: 1;
 }
@@ -123,10 +123,7 @@ h1 {
 .weather-icon {
   font-size: 30px;
 }
-
-
 /*//////////////////////////////////////     Current Forecast Components         //////////////////////////////*/
-
 #current-forecast {
   overflow: hidden;
 }
@@ -150,7 +147,6 @@ h1 {
   overflow: hidden;
   font-size: 20px;
 }
-
 /*////////////////////////////////Forecast Card Elements///////////////////////////////////////////*/
 
 /*nothing is needed at the moment for this class*/
@@ -167,7 +163,6 @@ h1 {
 .daily-low {
    padding: 5px;
 }
-
 /*//////////////////////////// Media Queries /////////////////////////////////////////////////////*/
 /* Media query for small screens medium */
 @media (max-width: 1024px) {
@@ -242,6 +237,12 @@ h1 {
     text-align: center;
     margin-top: 0;
     margin-left: 20%;
+  }
+
+  #weather-header{
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 
   #current-container {
