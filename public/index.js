@@ -84,19 +84,8 @@ function searchIsValid(inputArr) {
 		document.getElementById('search-text').value = "Query empty.";
 		return false;
 	}
-	if(containsLetters == true){
-		return false;
-	}
 	return true;
 }
-//check for letters in coorinates
-function containsLetters(str) {
-    if(/[a-zA-Z]/.test(str) == true){
-		return true;
-	}
-	return false;
-}
-
 //Use default latitude/longitude
 function urlParametersEmpty(urlParams){
 	if (urlParams == null || urlParams != ""){
