@@ -1,42 +1,42 @@
-#Project Description:
+Project Description:
 This is a very basic HTML/CSS project that runs Express for the server with the possiblity for a React implementation later. It reads data provided by OpenMeteo API to give a weather forecast for the next six days, as well as the current weather.
 
-
-##Project Dependencies:
+Project Dependencies:
     - Node.js
     - Node Express
     - Javascript
 
-##Options to run this project:
+Options to run this project:
     - Liveserver extension via Visual Code
     - Port 4000 using Express.js
 
-###Using express server:
-    - Open the terminal in VS code
-    - Run "npm start" in the command line
-    - navigate to localhost:4000
-    - Page is loaded!
-    - If onload fails to trigger, click the "temperature" button
+Using Express Server:
+    (1) Open the terminal in VS code
+    (2) Run "npm start" in the command line
+    (3) navigate to localhost:4000
+    (4) Page is loaded!
+   
+    Note: If onload fails to trigger, click the "temperature" button
 
-###Using Liveserver Extension in VS Code:
-    - Use ctrl-shift-x to open the extension tab or navigate to the extension panel on the side navigationbar in VS Code.
-    - Install Live Server by Ritwick Day.
-    - Make sure you are in the project folder you wish to open.
-    - Right click on the file you wish to run and select "Run live server" or navigate to the Visual Vode terminal and select the live server   icon.
-    - This will open a page with everything loaded.
+Using Liveserver Extension in VS Code:
+    (1) Use ctrl-shift-x to open the extension tab or navigate to the extension panel on the side navigationbar in VS Code.
+    (2) Install Live Server by Ritwick Day.
+    (3) Make sure you are in the project folder you wish to open.
+    (4) Right click on the file you wish to run and select "Run live server" or navigate to the Visual Vode terminal and select the live server   icon.
+    (5) This will open a page with everything loaded.
 
-##Issues you may encounter while installing:
-    - npm not found
+Issues you may encounter while installing:
+    (1) npm not found
         - Fixes:
             - Restart VSCode
             - Verify installation of Node.js using node -v or npm -v in the command line. 
             Do this inside and outside of the project to verify if it is an issue with the program installation.
-    - Unable to run script:
+    (2) Unable to run script:
         - This bug can appear on windows. Fixes:
             - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
                 - This will enable the user to run the install scripts for npm
     
-##Recommended Improvements:
+Recommended Improvements:
     - Add color and images to the color scheme
     - Fix the class and ID's of each portion of the html so it better aligns with naming conventions and makes the CSS more flexible
     - Consider implementing React
